@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Big Taxi Barcelona: official Barcelona taxi van for up to 7 passengers. Airport transfers, cruise port, city tours and wheelchair accessible taxi.">
+<title>Big Taxi Barcelona | Airport & 7-Seater Taxi</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f7f7f7;color:#222}
+header{background:#111;color:white;padding:18px;text-align:center}
+h1{color:#ffd000;margin:8px 0}
+nav{background:#ffd000;padding:12px;text-align:center}
+nav a{color:#111;margin:8px;text-decoration:none;font-weight:bold}
+.hero{background:#171717;color:white;text-align:center;padding:50px 18px}
+.hero h2{font-size:30px;color:#ffd000}
+.btn{display:inline-block;background:#20b15a;color:white;padding:15px 22px;border-radius:9px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+section{padding:30px 18px;max-width:950px;margin:auto}
+h2{color:#111}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 8px #ddd}
+form{background:white;padding:20px;border-radius:12px}
+input,select,textarea{width:100%;padding:13px;margin:8px 0 15px;border:1px solid #bbb;border-radius:7px;font-size:16px}
+label{font-weight:bold}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.gallery img{width:100%;border-radius:10px}
+footer{background:#111;color:white;text-align:center;padding:25px}
+.lang{background:#ffd000;border:0;border-radius:5px;padding:9px;margin:5px;font-weight:bold}
+</style>
+</head>
+<body>
+
+<header>
+<h1>🚖 BIG TAXI BARCELONA</h1>
+<p>Official Barcelona Taxi | Up to 7 Passengers</p>
+<button class="lang" onclick="setLang('en')">🇬🇧 English</button>
+<button class="lang" onclick="setLang('es')">🇪🇸 Español</button>
+</header>
+
+<nav>
+<a href="#services" data-en="Services" data-es="Servicios">Services</a>
+<a href="#booking" data-en="Booking" data-es="Reservar">Booking</a>
+<a href="#gallery" data-en="Gallery" data-es="Fotos">Gallery</a>
+</nav>
+
+<div class="hero">
+<h2 data-en="Your Big Taxi in Barcelona" data-es="Tu taxi grande en Barcelona">Your Big Taxi in Barcelona</h2>
+<p data-en="Airport Transfers • Cruise Port • City Tours • Accessible Taxi" data-es="Traslados al aeropuerto • Puerto de cruceros • Tours por la ciudad • Taxi adaptado">Airport Transfers • Cruise Port • City Tours • Accessible Taxi</p>
+<a class="btn" href="#booking" data-en="BOOK YOUR TAXI" data-es="RESERVA TU TAXI">BOOK YOUR TAXI</a>
+</div>
+
+<section id="services">
+<h2 data-en="Our Taxi Services" data-es="Nuestros servicios">Our Taxi Services</h2>
+<div class="cards">
+<div class="card">✈️ <h3>Barcelona Airport</h3><p>Airport pickup and drop-off.</p></div>
+<div class="card">🚐 <h3>7-Seater Taxi Van</h3><p>For families and groups of up to 7 passengers.</p></div>
+<div class="card">🚢 <h3>Cruise Port Transfers</h3><p>Pickup and drop-off at Barcelona cruise port.</p></div>
+<div class="card">🏨 <h3>Hotel Transfers</h3><p>Comfortable transfers to your hotel.</p></div>
+<div class="card">🏛️ <h3>Barcelona City Tours</h3><p>Discover Barcelona with tours by the hour.</p></div>
+<div class="card">♿ <h3>Wheelchair Accessible Taxi</h3><p>Accessible transport. Please confirm your requirements.</p></div>
+</div>
+</section>
+
+<section id="booking">
+<h2 data-en="Book Your Taxi" data-es="Reserva tu taxi">Book Your Taxi</h2>
+<p data-en="Fill in the form and send your request via WhatsApp." data-es="Rellena el formulario y envía tu solicitud por WhatsApp.">Fill in the form and send your request via WhatsApp.</p>
+
+<form id="taxiForm">
+<label data-en="Pickup Location" data-es="Lugar de recogida">Pickup Location</label>
+<input id="pickup" required placeholder="Airport, hotel, address...">
+
+<label data-en="Destination" data-es="Destino">Destination</label>
+<input id="destination" required placeholder="Destination">
+
+<label data-en="Pickup Date" data-es="Fecha de recogida">Pickup Date</label>
+<input type="date" id="date" required>
+
+<label data-en="Pickup Time" data-es="Hora de recogida">Pickup Time</label>
+<input type="time" id="time" required>
+
+<label data-en="Passengers" data-es="Pasajeros">Passengers</label>
+<select id="passengers" required>
+<option value="">Select</option>
+<option>1</option><option>2</option><option>3</option>
+<option>4</option><option>5</option><option>6</option><option>7</option>
+</select>
+
+<label data-en="Suitcases" data-es="Maletas">Suitcases</label>
+<input type="number" id="bags" min="0" value="0">
+
+<label data-en="Flight Number (Optional)" data-es="Número de vuelo (opcional)">Flight Number (Optional)</label>
+<input id="flight" placeholder="Example: VY1234">
+
+<label data-en="Special Requests" data-es="Solicitudes especiales">Special Requests</label>
+<textarea id="notes" placeholder="Wheelchair, child seat, city tour hours..."></textarea>
+
+<button class="btn" type="submit" data-en="📲 SEND VIA WHATSAPP" data-es="📲 ENVIAR POR WHATSAPP">📲 SEND VIA WHATSAPP</button>
+</form>
+<p data-en="Booking is confirmed only after we reply." data-es="La reserva se confirma únicamente cuando respondemos.">Booking is confirmed only after we reply.</p>
+</section>
+
+<section id="gallery">
+<h2 data-en="Our Taxi Gallery" data-es="Fotos de nuestro taxi">Our Taxi Gallery</h2>
+<p data-en="Photos of our real Barcelona taxi van." data-es="Fotos de nuestro taxi real de Barcelona.">Photos of our real Barcelona taxi van.</p>
+<div class="gallery">
+<img src="taxi1.jpg" alt="Big Taxi Barcelona exterior" onerror="this.style.display='none'">
+<img src="taxi2.jpg" alt="Barcelona taxi front" onerror="this.style.display='none'">
+<img src="taxi3.jpg" alt="Taxi passenger seats" onerror="this.style.display='none'">
+<img src="taxi4.jpg" alt="Taxi interior" onerror="this.style.display='none'">
+<img src="taxi5.jpg" alt="Taxi luggage area" onerror="this.style.display='none'">
+<img src="taxi6.jpg" alt="Taxi wheelchair ramp" onerror="this.style.display='none'">
+<img src="taxi7.jpg" alt="Big Taxi Barcelona van" onerror="this.style.display='none'">
+</div>
+</section>
+
+<footer>
+<h3>🚖 BIG TAXI BARCELONA</h3>
+<p>Barcelona, Spain</p>
+<p>📞 +34 612 423 169</p>
+<a class="btn" href="https://wa.me/34612423169">WhatsApp</a>
+<p>© 2026 Big Taxi Barcelona</p>
+</footer>
+
+<script>
+let language='en';
+function setLang(lang){
+language=lang;
+document.documentElement.lang=lang;
+document.querySelectorAll('[data-en]').forEach(el=>{
+el.textContent=el.getAttribute('data-'+lang);
+});
+}
+document.getElementById('date').min=new Date().toLocaleDateString('en-CA');
+document.getElementById('taxiForm').addEventListener('submit',function(e){
+e.preventDefault();
+const v=id=>document.getElementById(id).value;
+const message=
+'🚖 BIG TAXI BARCELONA\n'+
+'New Booking Request\n\n'+
+'📍 Pickup: '+v('pickup')+'\n'+
+'📍 Destination: '+v('destination')+'\n'+
+'📅 Date: '+v('date')+'\n'+
+'⏰ Time: '+v('time')+'\n'+
+'👥 Passengers: '+v('passengers')+'\n'+
+'🧳 Suitcases: '+v('bags')+'\n'+
+'✈️ Flight: '+(v('flight')||'N/A')+'\n'+
+'📝 Requests: '+(v('notes')||'None');
+window.location.href='https://wa.me/34612423169?text='+encodeURIComponent(message);
+});
+</script>
+</body>
+</html>
